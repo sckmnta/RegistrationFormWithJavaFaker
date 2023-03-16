@@ -1,4 +1,4 @@
-package tests.сomponents;
+package tests.pages.сomponents;
 
 import static com.codeborne.selenide.Selenide.$;
 

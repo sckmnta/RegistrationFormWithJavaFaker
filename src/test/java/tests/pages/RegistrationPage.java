@@ -1,15 +1,16 @@
-package tests;
+package tests.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import tests.сomponents.CalendarComponent;
-import tests.сomponents.RegistrationModal;
+import tests.TestData;
+import tests.pages.сomponents.CalendarComponent;
+import tests.pages.сomponents.RegistrationModal;
 
 import java.io.File;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationPage {
+public class RegistrationPage extends TestData {
     CalendarComponent calendarComponent = new CalendarComponent();
     RegistrationModal registrationModal = new RegistrationModal();
     private SelenideElement
@@ -17,8 +18,8 @@ public class RegistrationPage {
             lastNameInput = $x("//input[@id='lastName']"),
             mailInput = $x("//input[@id='userEmail']"),
             numberInput = $("#userNumber"),
-            adressInput = $("#currentAddress"),
-            genderInput = $x("//label[text()='Other']"),
+            addressInput = $("#currentAddress"),
+            genderInput = $("#genterWrapper"),
             dateOfBirthInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
             hobbiesInput = $("#hobbiesWrapper"), //$x("//label[text()='Reading']"), не работает почему то):
@@ -56,11 +57,11 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setAddress(String value) {
-        adressInput.setValue(value);
+        addressInput.setValue(value);
         return this;
     }
 
-    public RegistrationPage setGender() {
+    public RegistrationPage setGender(String value) {
         genderInput.click();
         return this;
     }

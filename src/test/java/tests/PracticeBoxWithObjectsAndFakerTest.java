@@ -2,8 +2,8 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
-public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
 
+public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
 
 
     @Test
@@ -14,11 +14,11 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setMail(userMail)
-                .setGender()
+                .setGender(gender)
                 .setPhone(userNumber)
-                .setBirthDate("18", "December", "2001")
-                .setSecondSubject("Economics")
-                .setHobby("Reading")
+                .setBirthDate(dayOfBirth, monthOfBirth, yearOfBirth)
+                .setSecondSubject(subject)
+                .setHobby(hobby)
                 .setPicture()
                 .setAddress(currentAddress)
                 .setState("Rajasthan")
@@ -27,11 +27,11 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
                 .verifyModal()
                 .verifyResult("Student Name", firstName + " " + lastName)
                 .verifyResult("Student Email", userMail)
-                .verifyResult("Gender", "Other")
+                .verifyResult("Gender", gender)
                 .verifyResult("Mobile", userNumber)
-                .verifyResult("Date of Birth", "18 December,2001")
-                .verifyResult("Subjects", "Economics")
-                .verifyResult("Hobbies", "Reading")
+                .verifyResult("Date of Birth", dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
+                .verifyResult("Subjects", subject)
+                .verifyResult("Hobbies", hobby)
                 .verifyResult("Picture", "exmpl.jpg")
                 .verifyResult("Address", currentAddress)
                 .verifyResult("State and City", "Rajasthan Jaipur");
