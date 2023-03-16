@@ -62,7 +62,8 @@ public class RegistrationPage extends TestData {
     }
 
     public RegistrationPage setGender(String value) {
-        genderInput.click();
+        genderInput.$(byText(value)).click();
+
         return this;
     }
 
