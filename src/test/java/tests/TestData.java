@@ -25,12 +25,4 @@ public class TestData {
             picture = "exmpl.jpg";
 
 
-
-
-
-
-
-
-
-
 }

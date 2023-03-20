@@ -1,6 +1,7 @@
 package utils;
 
 import com.github.javafaker.Faker;
+
 import static tests.TestData.state;
 
 import java.util.Locale;
@@ -14,34 +15,44 @@ public class RandomUtils {
     public static String randomFirstName() {
         return new Faker().name().firstName();
     }
+
     public static String randomLastName() {
         return new Faker().name().lastName();
     }
+
     public static String randomUserMail() {
         return new Faker().internet().emailAddress();
     }
+
     public static String randomUserNumber() {
         return new Faker().phoneNumber().subscriberNumber(10);
     }
+
     public static String randomCurrentAddress() {
         return new Faker().address().fullAddress();
     }
+
     public static String randomGender() {
         return new Faker().options().option("Male", "Female", "Other");
     }
+
     public static String randomMonthOfBirth() {
         return new Faker().options().option("January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December");
     }
+
     public static int randomDayOfBirth() {
         return new Faker().number().numberBetween(1, 28);
     }
+
     public static int randomYearOfBirth() {
         return new Faker().number().numberBetween(1941, 1991);
     }
+
     public static String randomSubject() {
         return new Faker().options().option("Economics", "Hindi", "Arts");
     }
+
     public static String randomHobbies() {
         return new Faker().options().option("Sports", "Reading", "Music");
     }
