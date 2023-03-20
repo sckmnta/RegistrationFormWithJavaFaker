@@ -21,8 +21,8 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
                 .setHobby(hobby)
                 .setPicture()
                 .setAddress(currentAddress)
-                .setState("Rajasthan")
-                .setCity("Jaipur")
+                .setState(state)
+                .setCity(city)
                 .clickSubmit()
                 .verifyModal()
                 .verifyResult("Student Name", firstName + " " + lastName)
@@ -32,9 +32,9 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
                 .verifyResult("Date of Birth", dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
                 .verifyResult("Subjects", subject)
                 .verifyResult("Hobbies", hobby)
-                .verifyResult("Picture", "exmpl.jpg")
+                .verifyResult("Picture", picture)
                 .verifyResult("Address", currentAddress)
-                .verifyResult("State and City", "Rajasthan Jaipur");
+                .verifyResult("State and City", state + " " + city);
     }
 
 }
