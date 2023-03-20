@@ -1,7 +1,6 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import tests.TestData;
 import pages.сomponents.CalendarComponent;
 import pages.сomponents.RegistrationModal;
 
@@ -10,7 +9,7 @@ import java.io.File;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationPage extends TestData {
+public class RegistrationPage {
     CalendarComponent calendarComponent = new CalendarComponent();
     RegistrationModal registrationModal = new RegistrationModal();
     private SelenideElement
@@ -89,7 +88,7 @@ public class RegistrationPage extends TestData {
     }
 
     public RegistrationPage setHobby(String value) {
-        hobbiesInput.$(byText(value)).click(); //setValue(value).click(); не работает почему то):
+        hobbiesInput.$(byText(value)).click();
         return this;
     }
 

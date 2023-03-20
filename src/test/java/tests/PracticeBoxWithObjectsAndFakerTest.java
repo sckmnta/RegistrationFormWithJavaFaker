@@ -7,7 +7,7 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
 
 
     @Test
-    void practicefillformtest() {
+    void practiceFillfFormTest() {
 
 
         registrationPage.openPage()
