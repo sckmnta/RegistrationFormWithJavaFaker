@@ -20,7 +20,7 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
                 .setBirthDate(dayOfBirth, monthOfBirth, yearOfBirth)
                 .setSecondSubject(subject)
                 .setHobby(hobby)
-                .setPicture()
+                .setPicture(picture)
                 .setAddress(currentAddress)
                 .setState(state)
                 .setCity(city)

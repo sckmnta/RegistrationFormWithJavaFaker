@@ -89,12 +89,12 @@ public class RegistrationPage extends TestData {
     }
 
     public RegistrationPage setHobby(String value) {
-        hobbiesInput.$(byText(value)).click(); //setValue(value).click(); не работает почему то):
+        hobbiesInput.$(byText(value)).click();
         return this;
     }
 
-    public RegistrationPage setPicture() {
-        uploadPicture.uploadFile(new File("src/test/resources/exmpl.jpg"));
+    public RegistrationPage setPicture(String value) {
+        uploadPicture.uploadFromClasspath(value);
         return this;
     }
 
