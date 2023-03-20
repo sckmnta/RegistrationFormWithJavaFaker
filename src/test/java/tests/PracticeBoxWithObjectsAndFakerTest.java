@@ -10,6 +10,7 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
     void practiceFillfFormTest() {
 
 
+
         registrationPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
