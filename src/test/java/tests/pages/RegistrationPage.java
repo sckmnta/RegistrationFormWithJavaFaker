@@ -22,7 +22,7 @@ public class RegistrationPage extends TestData {
             genderInput = $("#genterWrapper"),
             dateOfBirthInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
-            hobbiesInput = $("#hobbiesWrapper"), //$x("//label[text()='Reading']"), не работает почему то):
+            hobbiesInput = $("#hobbiesWrapper"),
             uploadPicture = $x("//input[@id='uploadPicture']"),
             stateInput = $("#react-select-3-input"),
             cityInput = $("#react-select-4-input"),
