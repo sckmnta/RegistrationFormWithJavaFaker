@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class RegistrationPage extends TestData {
     CalendarComponent calendarComponent = new CalendarComponent();
     RegistrationModal registrationModal = new RegistrationModal();
+
     private SelenideElement
             firstNameInput = $x("//input[@id='firstName']"),
             lastNameInput = $x("//input[@id='lastName']"),

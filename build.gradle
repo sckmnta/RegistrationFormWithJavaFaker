@@ -44,6 +44,10 @@ compileTestJava {
 test {
     useJUnitPlatform()
 }
+test {
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+}
 
 task fillForm_test(type: Test) {
     useJUnitPlatform {
