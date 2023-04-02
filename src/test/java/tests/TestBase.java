@@ -18,7 +18,6 @@ public class TestBase extends TestData {
     RegistrationPage registrationPage = new RegistrationPage();
 
 
-
     @BeforeAll
     static void beforeall() {
         Configuration.holdBrowserOpen = true;
@@ -36,6 +35,7 @@ public class TestBase extends TestData {
 
         Configuration.browserCapabilities = capabilities;
     }
+
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
