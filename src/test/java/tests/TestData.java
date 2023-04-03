@@ -8,7 +8,6 @@ import static utils.RandomUtils.*;
 
 
 public class TestData {
-    static Faker faker = new Faker(new Locale("sv"));
     public static String firstName = randomFirstName(),
             lastName = randomLastName(),
             userMail = randomUserMail(),
