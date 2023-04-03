@@ -54,3 +54,9 @@ task fillForm_test(type: Test) {
         includeTags  ("fillForm")
     }
 }
+
+task couple_properties_test(type: Test) {
+    useJUnitPlatform {
+        includeTags  ("couple_properties_test")
+    }
+}
