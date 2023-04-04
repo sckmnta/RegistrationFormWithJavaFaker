@@ -22,10 +22,11 @@ public class TestBase extends TestData {
 
     @BeforeAll
     static void beforeall() {
-        Configuration.baseUrl = System.getProperty("baseUrl");
+
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.baseUrl = System.getProperty("baseUrl");
         Configuration.remote = "https://user1:1234@" + System.getProperty("selenoidAddress");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
