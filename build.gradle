@@ -40,14 +40,13 @@ compileJava {
 compileTestJava {
     options.encoding = 'UTF-8'
 }
-tasks.withType(Test) {
+
+test {
+    useJUnitPlatform()
+}
+test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
-
-    test {
-        useJUnitPlatform()
-    }
-
 }
 
 task fillForm_test(type: Test) {
