@@ -21,19 +21,20 @@ public class TestBase extends TestData {
 
 
     @BeforeAll
-    static void beforeall() {
-        Configuration.holdBrowserOpen = true;
-        Configuration.browser = "chrome";
-        Configuration.browserVersion = "100.0";
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+    static void BeforeAllWithConfiguration() {
 
+
+        Configuration.baseUrl = System.getProperty("baseUrl");
+        Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
+
 
         Configuration.browserCapabilities = capabilities;
     }
