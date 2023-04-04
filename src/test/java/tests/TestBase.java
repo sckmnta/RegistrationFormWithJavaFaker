@@ -25,7 +25,7 @@ public class TestBase extends TestData {
 
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl");
         Configuration.remote = "https://user1:1234@" + System.getProperty("selenoidAddress");
 
