@@ -23,7 +23,7 @@ public class TestBase extends TestData {
     @BeforeAll
     static void beforeall() {
 
-        Configuration.browser = System.getProperty("browser");
+        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.baseUrl = System.getProperty("baseUrl");
