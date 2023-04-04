@@ -3,7 +3,6 @@ package tests.properties;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Configuration.browser;
 
 public class SystemPropertiesTest {
     @Test
@@ -16,3 +15,4 @@ public class SystemPropertiesTest {
 
     }
 }
+

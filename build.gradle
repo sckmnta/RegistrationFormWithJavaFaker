@@ -51,12 +51,12 @@ test {
 
 task fillForm_test(type: Test) {
     useJUnitPlatform {
-        includeTags  ("fillForm")
+        includeTags("fillForm")
     }
 }
 
 task couple_properties_test(type: Test) {
     useJUnitPlatform {
-        includeTags  ("couple_properties_test")
+        includeTags("couple_properties_test")
     }
 }
