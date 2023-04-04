@@ -15,16 +15,16 @@ public class RegistrationPage extends TestData {
     RegistrationModal registrationModal = new RegistrationModal();
 
     private SelenideElement
-            firstNameInput = $x("#firstName"),
-            lastNameInput = $x("#lastName"),
-            mailInput = $x("#userEmail"),
+            firstNameInput = $("#firstName"),
+            lastNameInput = $("#lastName"),
+            mailInput = $("#userEmail"),
             numberInput = $("#userNumber"),
             addressInput = $("#currentAddress"),
             genderInput = $("#genterWrapper"),
             dateOfBirthInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
             hobbiesInput = $("#hobbiesWrapper"),
-            uploadPicture = $x("//input[@id='uploadPicture']"),
+            uploadPicture = $("#uploadPicture"),
             stateInput = $("#react-select-3-input"),
             cityInput = $("#react-select-4-input"),
             submitClick = $(".btn-primary");
