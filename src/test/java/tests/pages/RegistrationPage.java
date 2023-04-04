@@ -15,9 +15,9 @@ public class RegistrationPage extends TestData {
     RegistrationModal registrationModal = new RegistrationModal();
 
     private SelenideElement
-            firstNameInput = $x("//input[@id='firstName']"),
-            lastNameInput = $x("//input[@id='lastName']"),
-            mailInput = $x("//input[@id='userEmail']"),
+            firstNameInput = $x("#firstName"),
+            lastNameInput = $x("#lastName"),
+            mailInput = $x("#userEmail"),
             numberInput = $("#userNumber"),
             addressInput = $("#currentAddress"),
             genderInput = $("#genterWrapper"),
