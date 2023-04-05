@@ -22,11 +22,11 @@ public class TestBase extends TestData {
     @BeforeAll
     static void beforeall() {
         Configuration.holdBrowserOpen = true;
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browser_version", "100.0");
-        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
-        Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
-        Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_address", "selenoid.autotests.cloud/wd/hub");
+        Configuration.browser = System.getProperty("BROWSER", "chrome");
+        Configuration.browserVersion = System.getProperty("BROWSER_VERSION", "100.0");
+        Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
+        Configuration.baseUrl = System.getProperty("BASE_URL", "https://demoqa.com");
+        Configuration.remote = "https://user1:1234@" + System.getProperty("SELENOID_ADDRESS", "selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
