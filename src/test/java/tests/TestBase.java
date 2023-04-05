@@ -21,11 +21,11 @@ public class TestBase extends TestData {
     @BeforeAll
     static void beforeall() {
         Configuration.holdBrowserOpen = true;
-        Configuration.browser = System.getProperty("-Dbrowser=\"${browser}\"", "chrome");
-        Configuration.browserVersion = System.getProperty("-DbrowserVersion=\"${browser_version}\"", "100.0");
-        Configuration.browserSize = System.getProperty("-DbrowserSize=\"${browser_size}\"", "1920x1080");
-        Configuration.baseUrl = System.getProperty("-DbaseUrl=\"${base_url}\"", "https://demoqa.com");
-        Configuration.remote = "https://user1:1234@" + System.getProperty("-DselenoidAdress = \"${selenoid_address}\"", "selenoid.autotests.cloud/wd/hub");
+        Configuration.browser = System.getProperty("-Dbrowser="${browser}"", "chrome");
+        Configuration.browserVersion = System.getProperty("-DbrowserVersion="${browser_version}"", "100.0");
+        Configuration.browserSize = System.getProperty("-DbrowserSize="${browser_size}"", "1920x1080");
+        Configuration.baseUrl = System.getProperty("-DbaseUrl="${base_url}"", "https://demoqa.com");
+        Configuration.remote = "https://user1:1234@" + System.getProperty("-DselenoidAdress = "${selenoid_address}"", "selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
