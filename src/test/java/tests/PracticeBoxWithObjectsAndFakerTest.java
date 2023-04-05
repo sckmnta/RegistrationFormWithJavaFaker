@@ -12,8 +12,8 @@ public class PracticeBoxWithObjectsAndFakerTest extends TestBase {
 
 
     @Test
-    @Feature("Reggistration Modal Test")
-    @Story("Fill Form And CHeck Results")
+    @Feature("Registration Modal Test")
+    @Story("Fill Form And Check Results")
     @Owner("sckmnta")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "Registration Form", url = "https://demoqa.com/")

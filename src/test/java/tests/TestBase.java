@@ -23,11 +23,11 @@ public class TestBase extends TestData {
     @BeforeAll
     static void beforeall() {
         Configuration.holdBrowserOpen = true;
-        Configuration.browser = "chrome";
-        Configuration.browserVersion = "100.0";
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browser_version", "100.0");
+        Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
+        Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
+        Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_address", "selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -42,7 +42,6 @@ public class TestBase extends TestData {
     void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
-    static Faker faker = new Faker(new Locale("sv"));
 
     @AfterEach
     void addAttachments() {
