@@ -4,4 +4,7 @@
 
 # Gradle
 .gradle
-build
+/build/allure/
+/build/allure-results/
+/build/classes/
+/build/generated/
