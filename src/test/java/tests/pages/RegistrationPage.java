@@ -13,17 +13,18 @@ import static com.codeborne.selenide.Selenide.*;
 public class RegistrationPage extends TestData {
     CalendarComponent calendarComponent = new CalendarComponent();
     RegistrationModal registrationModal = new RegistrationModal();
+
     private SelenideElement
-            firstNameInput = $x("//input[@id='firstName']"),
-            lastNameInput = $x("//input[@id='lastName']"),
-            mailInput = $x("//input[@id='userEmail']"),
+            firstNameInput = $("#firstName"),
+            lastNameInput = $("#lastName"),
+            mailInput = $("#userEmail"),
             numberInput = $("#userNumber"),
             addressInput = $("#currentAddress"),
             genderInput = $("#genterWrapper"),
             dateOfBirthInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
-            hobbiesInput = $("#hobbiesWrapper"), //$x("//label[text()='Reading']"), не работает почему то):
-            uploadPicture = $x("//input[@id='uploadPicture']"),
+            hobbiesInput = $("#hobbiesWrapper"),
+            uploadPicture = $("#uploadPicture"),
             stateInput = $("#react-select-3-input"),
             cityInput = $("#react-select-4-input"),
             submitClick = $(".btn-primary");
@@ -62,7 +63,8 @@ public class RegistrationPage extends TestData {
     }
 
     public RegistrationPage setGender(String value) {
-        genderInput.click();
+        genderInput.$(byText(value)).click();
+
         return this;
     }
 
@@ -88,12 +90,12 @@ public class RegistrationPage extends TestData {
     }
 
     public RegistrationPage setHobby(String value) {
-        hobbiesInput.$(byText(value)).click(); //setValue(value).click(); не работает почему то):
+        hobbiesInput.$(byText(value)).click();
         return this;
     }
 
-    public RegistrationPage setPicture() {
-        uploadPicture.uploadFile(new File("src/test/resources/exmpl.jpg"));
+    public RegistrationPage setPicture(String value) {
+        uploadPicture.uploadFromClasspath(value);
         return this;
     }
 

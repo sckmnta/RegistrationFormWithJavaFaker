@@ -1,0 +1,7 @@
+[2023-04-06T15:38:47.237Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202303300101/pubads_impl.js 9:318129 "[GPT] Invalid arguments: SizeMappingBuilder.addSize([0, 0], [[320, 50], [300, 75], [300, 50]]). All zero-area slot sizes were removed."
+[2023-04-06T15:38:47.237Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202303300101/pubads_impl.js 9:318129 "[GPT] Invalid arguments: SizeMappingBuilder.addSize([730, 200], [[728, 90], [468, 60]]). All zero-area slot sizes were removed."
+[2023-04-06T15:38:47.237Z] [WARNING] https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202303300101/pubads_impl.js 9:318129 "[GPT] Invalid arguments: SizeMappingBuilder.addSize([975, 200], [[970, 90], [728, 90], [960, 90], [750, 100], [950, 90], [468, 60]]). All zero-area slot sizes were removed."
+[2023-04-06T15:38:47.294Z] [SEVERE] https://cdn.ad.plus/player/adplus.js 401:504 Uncaught TypeError: g(...).setup is not a function
+[2023-04-06T15:38:47.813Z] [SEVERE] https://tags.crwdcntrl.net/lt/c/16589/sync.min.js 0:10302 "SYNC.JS: Aborting because TCF string was expected but not present."
+[2023-04-06T15:38:47.813Z] [SEVERE] https://tags.crwdcntrl.net/lt/c/16589/sync.min.js 0:10302 "SYNC.JS: Aborting because no consent was present on the request or stored server-side"
+[2023-04-06T15:38:47.814Z] [SEVERE] https://tags.crwdcntrl.net/lt/c/16589/sync.min.js 0:10302 "SYNC.JS: Aborting due to above errors."
