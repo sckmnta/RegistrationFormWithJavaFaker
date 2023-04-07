@@ -2,7 +2,7 @@
   "base": {
     "logo": "",
     "project": "example project",
-    "environment": "qa_guru",
+    "environment": "local",
     "comment": "something happened, @sckmnta",
     "reportLink": "https://jenkins.autotests.cloud",
     "language": "en",
