@@ -1,12 +1,12 @@
 {
   "base": {
     "logo": "",
-    "project": "example project",
+    "project": "${JOB_BASE_NAME}",
     "environment": "local",
     "comment": "something happened, @sckmnta",
     "reportLink": "https://jenkins.autotests.cloud",
     "language": "en",
-    "allureFolder": "build/reports/allure-report/allureReport",
+    "allureFolder": "${BUILD_URL}",
     "enableChart": true
   },
   "telegram": {
