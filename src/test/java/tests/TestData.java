@@ -11,7 +11,7 @@ public class TestData {
     static Faker faker;
 
     static {
-        faker = new Faker(new Locale("sv"));
+        faker = new Faker(new Locale("tr"));
     }
 
     public static String firstName = randomFirstName(),
