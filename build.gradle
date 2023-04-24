@@ -30,9 +30,7 @@ dependencies {
             "com.github.javafaker:javafaker:1.0.2",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "org.slf4j:slf4j-simple:2.0.6",
-            "io.qameta.allure:allure-selenide:2.21.0",
-            "org.aeonbits.owner:owner:1.0.12",
-            "org.assertj:assertj-core:3.24.2"
+            "io.qameta.allure:allure-selenide:2.21.0"
     )
 }
 
@@ -57,9 +55,8 @@ task fillForm_test(type: Test) {
     }
 }
 
-
-    task remote_test(type: Test) {
-        useJUnitPlatform {
-            includeTags("remote")
-        }
+task couple_properties_test(type: Test) {
+    useJUnitPlatform {
+        includeTags  ("couple_properties_test")
+    }
 }
