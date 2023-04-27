@@ -31,6 +31,8 @@ public class TestBase extends TestData {
 
         Configuration.pageLoadStrategy = "eager";
 
+        if (webDriverConfig.getRemoteUrl() != null && !webDriverConfig.getRemoteUrl().isBlank()){
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
@@ -53,10 +55,5 @@ public class TestBase extends TestData {
         Attach.addVideo();
     }
 
-
-    @AfterAll
-    static void afterAll() {
-        Configuration.holdBrowserOpen = false;
-    }
 
 }
