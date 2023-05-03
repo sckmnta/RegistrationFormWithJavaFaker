@@ -30,29 +30,31 @@ public class TestBase extends TestData {
 
         Configuration.pageLoadStrategy = "eager";
 
-        if (webDriverConfig.getRemoteUrl() != null && !webDriverConfig.getRemoteUrl().isBlank()){
+        if (webDriverConfig.getRemoteUrl() != null && !webDriverConfig.getRemoteUrl().isBlank()) {
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
 
-        Configuration.browserCapabilities = capabilities;
+            Configuration.browserCapabilities = capabilities;
+        }
     }
 
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        @BeforeEach
+        void addListener() {
+            SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        }
+
+        @AfterEach
+        void addAttachments() {
+            Attach.screenshotAs("Last screenshot");
+            Attach.pageSource();
+            Attach.browserConsoleLogs();
+            Attach.addVideo();
+        }
+
+
     }
 
-    @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-    }
-
-
-}
